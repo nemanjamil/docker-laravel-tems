@@ -7,8 +7,12 @@ services:
   nginx:
     build:
       context: ./nginx
+      args:
+        - ARG_LATEST=latest
+    image : nemanjamil/nginx
+
     volumes:
-      - ../src:/var/www/mikisiki/public
+      - ./src:/var/www/mikisiki/public
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/sites/default.conf:/etc/nginx/sites-available/default.conf
 
