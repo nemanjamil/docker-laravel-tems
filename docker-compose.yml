@@ -27,3 +27,16 @@ services:
         context: ./php-fpm
       volumes:
         - ./src:/var/www/mikisiki/public
+
+  # DATABASE
+  database:
+      build:
+        context: ./database
+      environment:
+        - MYSQL_DATABASE=mydb
+        - MYSQL_USER=myuser
+        - MYSQL_PASSWORD=secret
+        - MYSQL_ROOT_PASSWORD=docker
+      volumes:
+        - ./database/data.sql:/docker-entrypoint-initdb.d/data.sql
+
