@@ -2,6 +2,8 @@ version: '3'
 
 services:
 
+  # ovde treba da dodam laravel, mariaDB, i php
+  # link do laravela https://github.com/nemanjamil/examserver
   nginx:
     build:
       context: ./nginx
