@@ -1,5 +1,3 @@
-# docker-laravel-tems
-
 # Update hosts on windows
 
 127.0.0.1 mikisiki	
